@@ -12,47 +12,66 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class Server {
 
     private static final Logger log = LogManager.getLogger(Server.class);
     private static final int DEFAULT_PORT = 8080;
+    private static final int WORKER_NUM = 2;
+    private static final BlockingQueue<Socket> ACCEPTED_SOCKET_QUEUE = new ArrayBlockingQueue<>(200);
+    private static final ExecutorService WORKER_EXEC = Executors.newFixedThreadPool(WORKER_NUM);
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException {
 
         new Server().startListen(getValidPortParam(args));
     }
 
-
-    public void startListen(int port) throws IOException, InterruptedException {
+    public void startListen(int port) throws IOException {
 
         try (ServerSocket socket = new ServerSocket(port)) {
-            log.info("Web server listening on port %d (press CTRL-C to quit)", port);
+            log.info("Web server listening on port {} (press CTRL-C to quit)", port);
+
+            // start workers
+            for (int i = 0; i < WORKER_NUM; i++) {
+                WORKER_EXEC.execute(Server::consume);
+            }
+
+            // accept requests
             while (true) {
-                TimeUnit.MILLISECONDS.sleep(1);
-                handle(socket);
+                accept(socket);
             }
         }
     }
 
-    private static void handle(ServerSocket socket) {
-        try (Socket clientSocket = socket.accept();
-             BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))
-        ) {
-            List<String> requestContent = new ArrayList<>();
-            String temp = reader.readLine();
-            while(temp != null && temp.length() > 0) {
-                requestContent.add(temp);
-                temp = reader.readLine();
-            }
-            Request req = new Request(requestContent);
-            Response res = new Response(req);
-            res.write(clientSocket.getOutputStream());
-        } catch (IOException e) {
-            log.error("IO Error", e);
-        }
+    public static void consume() {
+        while (true) {
+            try (Socket clientSocket = ACCEPTED_SOCKET_QUEUE.take();
+                 BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
+                List<String> requestContent = new ArrayList<>();
+                String temp = reader.readLine();
+                while (temp != null && temp.length() > 0) {
+                    requestContent.add(temp);
+                    temp = reader.readLine();
+                }
+                Request req = new Request(requestContent);
+                Response res = new Response(req);
+                res.write(clientSocket.getOutputStream());
+
+                TimeUnit.NANOSECONDS.sleep(1);
+            } catch (IOException | InterruptedException e) {
+                log.error("Exception", e);
+            }
+        }
+    }
+
+    public static void accept(ServerSocket socket) {
+        try {
+            ACCEPTED_SOCKET_QUEUE.put(socket.accept());
+        } catch (IOException | InterruptedException e) {
+            log.error("Exception", e);
+        }
     }
 
     /**
