@@ -15,10 +15,10 @@ final class ContentType {
 		Map<String, String> extensions = new HashMap<>();
 		extensions.put("CSS", "Content-Type: text/css");
 		extensions.put("GIF", "Content-Type: image/gif");
-		extensions.put("HTM","Content-Type: text/html");
+		extensions.put("HTM", "Content-Type: text/html");
 		extensions.put("HTML", "Content-Type: text/html");
 		extensions.put("ICO", "Content-Type: image/x-icon");
-		extensions.put("JPG","Content-Type: image/jpeg");
+		extensions.put("JPG", "Content-Type: image/jpeg");
 		extensions.put("JPEG", "Content-Type: image/jpeg");
 		extensions.put("PNG", "Content-Type: image/png");
 		extensions.put("XML", "Content-type: text/xml");

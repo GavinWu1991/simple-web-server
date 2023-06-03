@@ -1,0 +1,250 @@
+[2023-06-03 18:24:55,641 INFO root] Taurus CLI Tool v1.16.23
+[2023-06-03 18:24:55,642 DEBUG root] Build: 14504 Wed May 24 10:40:08 UTC 2023
+[2023-06-03 18:24:55,642 DEBUG root] Extended git info:  5902bf48 Changelog 1.16.23
+[2023-06-03 18:24:55,643 DEBUG root] Command-line options: {'log': 'C:\\Users\\gavwu\\AppData\\Local\\Temp\\bzt_plr8cu94.log', 'option': None, 'quiet': None, 'verbose': None, 'no_system_configs': None, 'aliases': []}
+[2023-06-03 18:24:55,643 DEBUG root] Python: CPython 3.11.3
+[2023-06-03 18:24:55,643 DEBUG root] OS: uname_result(system='Windows', node='L50876', release='10', version='10.0.19045', machine='AMD64')
+[2023-06-03 18:24:55,645 DEBUG root] Path to interpreter: C:\Users\gavwu\AppData\Local\Programs\Python\Python311\python.exe
+[2023-06-03 18:24:55,645 DEBUG root] Path to packages: ['C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\bzt.exe', 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\python311.zip', 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\DLLs', 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib', 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311', 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages']
+[2023-06-03 18:24:55,652 DEBUG root] Default python: C:\Users\gavwu\AppData\Local\Programs\Python\Python311\python.EXE
+[2023-06-03 18:24:55,663 DEBUG root] Default python3: None
+[2023-06-03 18:24:55,663 DEBUG root] Using personal config: C:\Users\gavwu\.bzt-rc
+[2023-06-03 18:24:55,663 INFO root] Starting with configs: ['C:\\Users\\gavwu\\.bzt-rc', 'performance.yml']
+[2023-06-03 18:24:55,664 INFO Engine] Configuring...
+[2023-06-03 18:24:55,701 DEBUG Engine] Base configs list: ['C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\resources/10-base-config.yml']
+[2023-06-03 18:24:55,701 DEBUG Engine.Configuration] Configs: ['C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\resources/10-base-config.yml']
+[2023-06-03 18:24:55,701 DEBUG Engine.Configuration] Reading C:\Users\gavwu\AppData\Local\Programs\Python\Python311\Lib\site-packages\bzt\resources/10-base-config.yml as YAML
+[2023-06-03 18:24:55,713 DEBUG Engine] User configs list: ['C:\\Users\\gavwu\\.bzt-rc', 'performance.yml']
+[2023-06-03 18:24:55,714 DEBUG Engine.Configuration] Configs: ['C:\\Users\\gavwu\\.bzt-rc', 'performance.yml']
+[2023-06-03 18:24:55,714 DEBUG Engine.Configuration] Reading C:\Users\gavwu\.bzt-rc as YAML
+[2023-06-03 18:24:55,716 DEBUG Engine.Configuration] Reading performance.yml as YAML
+[2023-06-03 18:24:55,718 DEBUG Engine.Configuration] Configs: ['C:\\Users\\gavwu\\.bzt-rc', 'performance.yml']
+[2023-06-03 18:24:55,718 DEBUG Engine.Configuration] Reading C:\Users\gavwu\.bzt-rc as YAML
+[2023-06-03 18:24:55,720 DEBUG Engine.Configuration] Reading performance.yml as YAML
+[2023-06-03 18:24:55,721 INFO HTTPClient] Proxy settings not set
+[2023-06-03 18:24:55,722 DEBUG Engine] Requesting updates info: https://gettaurus.org/updates/?version=1.16.23&installID=windows-dc215c74d816
+[2023-06-03 18:24:55,722 INFO Engine] Artifacts dir: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024
+[2023-06-03 18:24:55,723 DEBUG HTTPClient] Making HTTP request GET https://gettaurus.org/updates/?version=1.16.23&installID=windows-dc215c74d816
+[2023-06-03 18:24:55,724 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective
+[2023-06-03 18:24:55,726 DEBUG Engine.Configuration] Dumping YAML config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.yml
+[2023-06-03 18:24:55,733 DEBUG urllib3.connectionpool] Starting new HTTPS connection (1): gettaurus.org:443
+[2023-06-03 18:24:55,735 DEBUG Engine.Configuration] Dumping JSON config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.json
+[2023-06-03 18:24:55,737 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\merged.yml
+[2023-06-03 18:24:55,738 DEBUG Engine.Configuration] Dumping YAML config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\merged.yml
+[2023-06-03 18:24:55,740 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\merged.json
+[2023-06-03 18:24:55,741 DEBUG Engine.Configuration] Dumping JSON config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\merged.json
+[2023-06-03 18:24:55,742 DEBUG Engine] Add existing artifact (move=False): C:\Users\gavwu\.bzt-rc
+[2023-06-03 18:24:55,742 DEBUG Engine] Copying C:\Users\gavwu\.bzt-rc to C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\.bzt-rc
+[2023-06-03 18:24:55,744 DEBUG Engine] Add existing artifact (move=False): performance.yml
+[2023-06-03 18:24:55,744 DEBUG Engine] Copying performance.yml to C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\performance.yml
+[2023-06-03 18:24:55,746 DEBUG Engine] Set PYTHONPATH to :
+	CURRENT: '' +
+	TEMP: 'C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\python-packages\3.11.3' +
+	USER: 'C:\Users\gavwu\.bzt\python-packages\3.11.3'
+[2023-06-03 18:24:55,747 DEBUG Engine] Content of user packages dir: []
+[2023-06-03 18:24:55,747 DEBUG Engine] OS env: OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+[2023-06-03 18:24:55,747 DEBUG Engine] OS env: TAURUS_ARTIFACTS_DIR=C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024
+[2023-06-03 18:24:55,747 DEBUG root] Closing log handler: C:\Users\gavwu\AppData\Local\Temp\bzt_plr8cu94.log
+[2023-06-03 18:24:55,749 DEBUG root] Switched writing logs to C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\bzt.log
+[2023-06-03 18:24:55,749 DEBUG root] Linting config
+[2023-06-03 18:24:55,750 INFO Engine] Preparing...
+[2023-06-03 18:24:55,750 DEBUG Engine] Module config: consolidator {'class': 'bzt.modules.aggregator.ConsolidatingAggregator'}
+[2023-06-03 18:24:55,750 DEBUG root] Importing module: bzt.modules.aggregator
+[2023-06-03 18:24:55,919 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\modules\\aggregator.py'>
+[2023-06-03 18:24:55,919 DEBUG Engine.consolidator] Buffer scaling setup: percentile 95.0 from [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0] selected
+[2023-06-03 18:24:55,919 DEBUG Engine] Module config: monitoring {'class': 'bzt.modules.monitoring.Monitoring'}
+[2023-06-03 18:24:55,919 DEBUG root] Importing module: bzt.modules.monitoring
+[2023-06-03 18:24:55,921 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\modules\\monitoring.py'>
+[2023-06-03 18:24:55,921 DEBUG Engine] Module config: local {'class': 'bzt.modules.provisioning.Local'}
+[2023-06-03 18:24:55,921 DEBUG root] Importing module: bzt.modules.provisioning
+[2023-06-03 18:24:55,921 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\modules\\provisioning.py'>
+[2023-06-03 18:24:55,921 DEBUG Engine] Module config: jmeter {'class': 'bzt.modules.jmeter.JMeterExecutor', 'protocol-handlers': {'http': 'bzt.jmx.http.HTTPProtocolHandler', 'mqtt': 'bzt.jmx.mqtt.MQTTProtocolHandler', 'grpc': 'bzt.jmx.grpc.GRPCProtocolHandler'}, 'plugins': ['jpgc-casutg', 'jpgc-dummy', 'jpgc-ffw', 'jpgc-fifo', 'jpgc-functions', 'jpgc-json', 'jpgc-perfmon', 'jpgc-prmctl', 'jpgc-tst'], 'properties': {'jmeter.save.saveservice.autoflush': 'true', 'jmeter.save.saveservice.connect_time': 'true', 'jmeterengine.force.system.exit': 'true', 'summariser.name': ''}}
+[2023-06-03 18:24:55,921 DEBUG root] Importing module: bzt.modules.jmeter
+[2023-06-03 18:24:55,930 DEBUG root] Loading class: 'JMeterExecutor' from <module 'bzt.modules.jmeter' from 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\modules\\jmeter.py'>
+[2023-06-03 18:24:55,931 DEBUG Engine.local] Preparing executor: jmeter/1967069035536
+[2023-06-03 18:24:55,931 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\jmeter.log
+[2023-06-03 18:24:55,931 DEBUG Engine.jmeter] Checking if port 4445 is free
+[2023-06-03 18:24:55,932 DEBUG Engine.jmeter] Port 4445 is free
+[2023-06-03 18:24:55,932 DEBUG Engine.jmeter] Using port 4445 for management
+[2023-06-03 18:24:55,932 DEBUG Engine.jmeter] Getting Jmeter version.
+[2023-06-03 18:24:55,932 DEBUG Engine.jmeter] Autodetect version is enabled
+[2023-06-03 18:24:55,932 DEBUG Engine.jmeter] JMeter version: 5.4.3
+[2023-06-03 18:24:55,932 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\requests.jmx
+[2023-06-03 18:24:55,933 DEBUG root] Importing module: bzt.jmx.http
+[2023-06-03 18:24:55,933 DEBUG root] Loading class: 'HTTPProtocolHandler' from <module 'bzt.jmx.http' from 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\jmx\\http.py'>
+[2023-06-03 18:24:55,933 DEBUG root] Importing module: bzt.jmx.mqtt
+[2023-06-03 18:24:55,934 DEBUG root] Loading class: 'MQTTProtocolHandler' from <module 'bzt.jmx.mqtt' from 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\jmx\\mqtt.py'>
+[2023-06-03 18:24:55,934 DEBUG root] Importing module: bzt.jmx.grpc
+[2023-06-03 18:24:55,935 DEBUG root] Loading class: 'GRPCProtocolHandler' from <module 'bzt.jmx.grpc' from 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\jmx\\grpc.py'>
+[2023-06-03 18:24:55,936 DEBUG JMeterScenarioBuilder] Saving JMX to: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\requests.jmx
+[2023-06-03 18:24:55,937 DEBUG Engine.jmeter] Additional system properties {'sun.net.inetaddr.ttl': 0}
+[2023-06-03 18:24:55,937 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\system.properties
+[2023-06-03 18:24:55,939 DEBUG Engine.jmeter] Additional properties: {'jmeter.save.saveservice.autoflush': 'true', 'jmeter.save.saveservice.connect_time': 'true', 'jmeterengine.force.system.exit': 'true', 'summariser.name': '', 'jmeterengine.nongui.port': 4445, 'jmeterengine.nongui.maxport': 4445, 'jmeter.save.saveservice.timestamp_format': 'ms', 'sampleresult.default.encoding': 'UTF-8', 'user.classpath': 'C:/Users/gavwu/Development/simple-web-server/2023-06-03_18-24-55.722024;C:/Users/gavwu/Development/simple-web-server/2023-06-03_18-24-55.722024'}
+[2023-06-03 18:24:55,939 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\jmeter-bzt.properties
+[2023-06-03 18:24:55,941 DEBUG Engine.jmeter.JavaVM] Trying JavaVM: ['java', '-version']
+[2023-06-03 18:24:55,941 DEBUG root] Executing shell: ['java', '-version'] at .
+[2023-06-03 18:24:56,273 DEBUG Engine.jmeter.JavaVM] JavaVM output: java version "11.0.14" 2022-01-18 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.14+8-LTS-263)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.14+8-LTS-263, mixed mode)
+
+[2023-06-03 18:24:56,273 DEBUG Engine.jmeter.TclLibrary] Checking if TCL_LIBRARY variable is present in environment
+[2023-06-03 18:24:56,273 DEBUG Engine.jmeter.TclLibrary] TCL_LIBRARY environment variable is not present
+[2023-06-03 18:24:56,275 DEBUG Engine.jmeter.TclLibrary] Tcl directory was found: C:\Users\gavwu\AppData\Local\Programs\Python\Python311\tcl\tcl8.6
+[2023-06-03 18:24:56,275 DEBUG Engine.jmeter.TclLibrary] Setting environment TCL_LIBRARY=C:\Users\gavwu\AppData\Local\Programs\Python\Python311\tcl\tcl8.6
+[2023-06-03 18:24:56,275 DEBUG Engine.jmeter.TclLibrary] Checking if TCL_LIBRARY variable is present in environment
+[2023-06-03 18:24:56,275 DEBUG Engine.jmeter.TclLibrary] TCL_LIBRARY environment variable is present
+[2023-06-03 18:24:56,275 DEBUG Engine.jmeter.JMeter] Trying JMeter..
+[2023-06-03 18:24:56,276 DEBUG root] Executing shell: ['C:\\Users\\gavwu\\.bzt\\jmeter-taurus\\5.4.3\\bin\\jmeter.bat', '-j', 'C:\\Users\\gavwu\\AppData\\Local\\Temp\\jmeter0bw_dg8flog', '--version'] at .
+[2023-06-03 18:24:58,036 DEBUG Engine.jmeter.JMeter] JMeter check:     _    ____   _    ____ _   _ _____       _ __  __ _____ _____ _____ ____
+   / \  |  _ \ / \  / ___| | | | ____|     | |  \/  | ____|_   _| ____|  _ \
+  / _ \ | |_) / _ \| |   | |_| |  _|    _  | | |\/| |  _|   | | |  _| | |_) |
+ / ___ \|  __/ ___ \ |___|  _  | |___  | |_| | |  | | |___  | | | |___|  _ <
+/_/   \_\_| /_/   \_\____|_| |_|_____|  \___/|_|  |_|_____| |_| |_____|_| \_\ 5.4.3
+
+Copyright (c) 1999-2021 The Apache Software Foundation
+
+ / 
+[2023-06-03 18:24:58,037 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\kpi.jtl
+[2023-06-03 18:24:58,037 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\error.jtl
+[2023-06-03 18:24:58,038 DEBUG Engine.jmeter.LoadSettingsProcessor] Load: LoadSpec(concurrency=60, throughput=None, ramp_up=10.0, hold=60.0, iterations=0, duration=70.0, steps=None)
+[2023-06-03 18:24:58,039 DEBUG Engine.jmeter.LoadSettingsProcessor.ThreadGroupHandler] Converting ThreadGroup (simple-web-server) to ConcurrencyThreadGroup and apply load parameters
+[2023-06-03 18:24:58,039 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\modified_requests.jmx
+[2023-06-03 18:24:58,039 DEBUG JMX] Saving JMX to: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\modified_requests.jmx
+[2023-06-03 18:24:58,041 DEBUG root] Executing shell: ['C:\\Users\\gavwu\\.bzt\\jmeter-taurus\\5.4.3\\bin\\PluginsManagerCMD.bat', 'install-for-jmx', 'C:\\Users\\gavwu\\Development\\simple-web-server\\2023-06-03_18-24-55.722024\\modified_requests.jmx'] at .
+[2023-06-03 18:25:01,743 DEBUG urllib3.connectionpool] https://gettaurus.org:443 "GET /updates/?version=1.16.23&installID=windows-dc215c74d816 HTTP/1.1" 500 1096
+[2023-06-03 18:25:01,743 DEBUG Engine] Failed to check for updates, server returned 5xx NoneType: None
+
+[2023-06-03 18:25:01,743 WARNING Engine] Failed to check for updates, server returned 5xx.
+[2023-06-03 18:25:02,083 DEBUG Engine.jmeter.JMeter] Try to detect plugins for C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\modified_requests.jmx
+2023-06-03 18:24:59,137 INFO o.j.r.PluginManagerCMD: Command is: install-for-jmx
+2023-06-03 18:25:00,438 INFO o.j.r.JARSourceHTTP: Found cached repo
+2023-06-03 18:25:00,611 INFO o.j.r.PluginManager: Plugins Status: [jpgc-functions=2.2, jpgc-casutg=2.10, jpgc-dummy=0.4, jpgc-ffw=2.0, jpgc-fifo=0.2, jpgc-json=2.7, jpgc-prmctl=0.4, jpgc-perfmon=2.1, jpgc-plugins-manager=1.7, jpgc-tst=2.5, jmeter-core=5.4.3, jmeter-ftp=5.4.3, jmeter-http=5.4.3, jmeter-jdbc=5.4.3, jmeter-jms=5.4.3, jmeter-junit=5.4.3, jmeter-java=5.4.3, jmeter-ldap=5.4.3, jmeter-mail=5.4.3, jmeter-mongodb=5.4.3, jmeter-native=5.4.3, jmeter-tcp=5.4.3, jmeter-components=5.4.3]
+2023-06-03 18:25:00,613 INFO o.j.r.PluginManagerCMD: Params line is: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\modified_requests.jmx
+2023-06-03 18:25:00,825 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2023-06-03 18:25:00,838 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2023-06-03 18:25:00,841 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2023-06-03 18:25:00,871 INFO o.a.j.p.h.c.CacheManager: Will only cache the following methods: [GET]
+2023-06-03 18:25:00,873 INFO o.a.j.p.h.c.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_
+2023-06-03 18:25:00,887 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-06-03 18:25:00,888 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-06-03 18:25:00,888 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-06-03 18:25:00,888 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2023-06-03 18:25:00,888 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2023-06-03 18:25:00,888 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2023-06-03 18:25:00,941 INFO o.j.r.PluginManager: Finishing without changes
+
+
+[2023-06-03 18:25:02,084 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\jmeter.out
+[2023-06-03 18:25:02,084 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\jmeter.err
+[2023-06-03 18:25:02,085 DEBUG Engine] Module config: final-stats {'class': 'bzt.modules.reporting.FinalStatus'}
+[2023-06-03 18:25:02,085 DEBUG root] Importing module: bzt.modules.reporting
+[2023-06-03 18:25:02,218 DEBUG root] Loading class: 'FinalStatus' from <module 'bzt.modules.reporting' from 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\modules\\reporting.py'>
+[2023-06-03 18:25:02,218 DEBUG Engine] Module config: console {'class': 'bzt.modules.console.ConsoleStatusReporter'}
+[2023-06-03 18:25:02,218 DEBUG root] Importing module: bzt.modules.console
+[2023-06-03 18:25:02,218 DEBUG root] Loading class: 'ConsoleStatusReporter' from <module 'bzt.modules.console' from 'C:\\Users\\gavwu\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\bzt\\modules\\console.py'>
+[2023-06-03 18:25:02,218 WARNING Engine] Module 'console' can be only used once, will merge all new instances into single
+[2023-06-03 18:25:02,219 DEBUG Engine.console] Can't use 'console' screen, trying 'gui'
+[2023-06-03 18:25:02,223 DEBUG Engine.Configuration] Dumping YAML config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.yml
+[2023-06-03 18:25:02,231 DEBUG Engine.Configuration] Dumping JSON config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.json
+[2023-06-03 18:25:02,232 INFO Engine] Starting...
+[2023-06-03 18:25:02,232 DEBUG Engine] Startup <bzt.modules.monitoring.Monitoring object at 0x000001C9FDF66E90>
+[2023-06-03 18:25:02,232 DEBUG Engine] Startup <bzt.modules.aggregator.ConsolidatingAggregator object at 0x000001C9FDD1D650>
+[2023-06-03 18:25:02,232 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x000001C9FDCD0F50>
+[2023-06-03 18:25:02,232 DEBUG Engine] Startup <bzt.modules.console.ConsoleStatusReporter object at 0x000001C9FEB3A550>
+[2023-06-03 18:25:02,233 INFO Engine.console] Waiting for results...
+[2023-06-03 18:25:02,233 DEBUG Engine] Startup <bzt.modules.reporting.FinalStatus object at 0x000001C9FEA2F690>
+[2023-06-03 18:25:02,233 DEBUG Engine] Startup <bzt.modules.provisioning.Local object at 0x000001C9FE737910>
+[2023-06-03 18:25:02,233 DEBUG Engine.local] Delay setup for jmeter/simple-web-server: 0(start-at) + 0(delay) = 0
+[2023-06-03 18:25:02,234 DEBUG Engine.Configuration] Dumping YAML config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.yml
+[2023-06-03 18:25:02,244 DEBUG Engine.Configuration] Dumping JSON config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.json
+[2023-06-03 18:25:02,244 DEBUG root] Leveling down log file verbosity to INFO, use -v option to have DEBUG messages enabled
+[2023-06-03 18:25:02,245 DEBUG root] Leveled up log file verbosity
+[2023-06-03 18:25:02,245 DEBUG Engine] New artifact filename: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\GRACEFUL
+[2023-06-03 18:25:02,245 DEBUG root] Executing shell: ['C:\\Users\\gavwu\\.bzt\\jmeter-taurus\\5.4.3\\bin\\jmeter.bat', '-t', 'C:\\Users\\gavwu\\Development\\simple-web-server\\2023-06-03_18-24-55.722024\\modified_requests.jmx', '-j', 'C:\\Users\\gavwu\\Development\\simple-web-server\\2023-06-03_18-24-55.722024\\jmeter.log', '-q', 'C:\\Users\\gavwu\\Development\\simple-web-server\\2023-06-03_18-24-55.722024\\jmeter-bzt.properties', '-n', '-S', 'C:\\Users\\gavwu\\Development\\simple-web-server\\2023-06-03_18-24-55.722024\\system.properties'] at C:\Users\gavwu\Development\simple-web-server
+[2023-06-03 18:25:02,330 DEBUG Engine.local] Starting execution: jmeter/simple-web-server, rest of available slots: 9223372036854775806
+[2023-06-03 18:25:02,330 DEBUG root] Leveling down log file verbosity to INFO, use -v option to have DEBUG messages enabled
+[2023-06-03 18:25:02,861 INFO Engine.console] Did not mute console logging
+[2023-06-03 18:25:03,029 INFO Engine.console] Waiting for finish...
+[2023-06-03 18:26:17,440 WARNING Engine] Please wait for graceful shutdown...
+[2023-06-03 18:26:17,440 DEBUG root] Leveled up log file verbosity
+[2023-06-03 18:26:17,440 INFO Engine] Shutting down...
+[2023-06-03 18:26:17,440 DEBUG Engine] Current stop reason: None
+[2023-06-03 18:26:17,441 DEBUG Engine.local] Shutdown jmeter/simple-web-server
+[2023-06-03 18:26:17,453 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2023-06-03 18:26:17,456 DEBUG Engine.Configuration] Dumping YAML config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.yml
+[2023-06-03 18:26:17,469 DEBUG Engine.Configuration] Dumping JSON config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.json
+[2023-06-03 18:26:17,470 INFO Engine] Post-processing...
+[2023-06-03 18:26:17,471 DEBUG Engine.local] Post-process jmeter/simple-web-server
+[2023-06-03 18:26:17,471 DEBUG Engine] Add existing artifact (move=True): C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\modified_requests.jmx
+[2023-06-03 18:26:17,471 DEBUG Engine] No need to copy C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\modified_requests.jmx
+[2023-06-03 18:26:17,472 DEBUG Engine.jmeter.JTLReader] Buffer len: 2; Known errors count: 0
+[2023-06-03 18:26:17,473 DEBUG Engine.jmeter.JTLReader] Aggregating: 1685787974, 2 in buffer
+[2023-06-03 18:26:17,509 DEBUG Engine.jmeter.JTLReader] Aggregating: 1685787975, 1 in buffer
+[2023-06-03 18:26:17,517 DEBUG Engine.jmeter.JTLReader] Buffer len: 0; Known errors count: 0
+[2023-06-03 18:26:17,517 DEBUG Engine.consolidator] Consolidator buffer[4]: dict_keys([1685787972, 1685787973, 1685787974, 1685787975])
+[2023-06-03 18:26:17,518 DEBUG Engine.consolidator] Merging into 1685787972
+[2023-06-03 18:26:17,518 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2023-06-03 18:26:17,524 DEBUG Engine.consolidator] Processed datapoint: 1685787972/ConsolidatingAggregator@1967058441808
+[2023-06-03 18:26:17,524 DEBUG Engine.consolidator] Merging into 1685787973
+[2023-06-03 18:26:17,525 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2023-06-03 18:26:17,529 DEBUG Engine.consolidator] Processed datapoint: 1685787973/ConsolidatingAggregator@1967058441808
+[2023-06-03 18:26:17,529 DEBUG Engine.consolidator] Merging into 1685787974
+[2023-06-03 18:26:17,529 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2023-06-03 18:26:17,533 DEBUG Engine.consolidator] Processed datapoint: 1685787974/ConsolidatingAggregator@1967058441808
+[2023-06-03 18:26:17,533 DEBUG Engine.consolidator] Merging into 1685787975
+[2023-06-03 18:26:17,533 DEBUG Engine.consolidator] Bypassing consolidation because of single result
+[2023-06-03 18:26:17,538 DEBUG Engine.consolidator] Processed datapoint: 1685787975/ConsolidatingAggregator@1967058441808
+[2023-06-03 18:26:17,538 INFO Engine.final-stats] Test duration: 0:01:15
+[2023-06-03 18:26:17,538 INFO Engine.final-stats] Samples count: 129708, 0.00% failures
+[2023-06-03 18:26:17,539 INFO Engine.final-stats] Average times: total 0.030, latency 0.030, connect 0.000
+[2023-06-03 18:26:17,539 INFO Engine.final-stats] Percentiles:
++---------------+---------------+
+| Percentile, % | Resp. Time, s |
++---------------+---------------+
+|           0.0 |         0.003 |
+|          50.0 |         0.031 |
+|          90.0 |         0.035 |
+|          95.0 |         0.037 |
+|          99.0 |         0.061 |
+|          99.9 |         0.125 |
+|         100.0 |         0.185 |
++---------------+---------------+
+[2023-06-03 18:26:17,540 INFO Engine.final-stats] Request label stats:
++---------------------------------------------------------+--------+---------+--------+-------+
+| label                                                   | status |    succ | avg_rt | error |
++---------------------------------------------------------+--------+---------+--------+-------+
+| http://127.0.0.1:8080                                   |   OK   | 100.00% |  0.030 |       |
+| http://127.0.0.1:8080/performance.yml                   |   OK   | 100.00% |  0.030 |       |
+| http://127.0.0.1:8080/readme.md                         |   OK   | 100.00% |  0.030 |       |
+| http://127.0.0.1:8080/src/main/java/liteweb/Server.java |   OK   | 100.00% |  0.030 |       |
++---------------------------------------------------------+--------+---------+--------+-------+
+[2023-06-03 18:26:17,541 DEBUG Engine.console] No logger_handler or orig_stream was detected
+[2023-06-03 18:26:17,541 INFO Engine.final-stats] Test duration: 0:01:15
+[2023-06-03 18:26:17,541 INFO Engine.final-stats] Samples count: 129708, 0.00% failures
+[2023-06-03 18:26:17,541 INFO Engine.final-stats] Average times: total 0.030, latency 0.030, connect 0.000
+[2023-06-03 18:26:17,542 INFO Engine.final-stats] Percentiles:
++---------------+---------------+
+| Percentile, % | Resp. Time, s |
++---------------+---------------+
+|           0.0 |         0.003 |
+|          50.0 |         0.031 |
+|          90.0 |         0.035 |
+|          95.0 |         0.037 |
+|          99.0 |         0.061 |
+|          99.9 |         0.125 |
+|         100.0 |         0.185 |
++---------------+---------------+
+[2023-06-03 18:26:17,543 INFO Engine.final-stats] Request label stats:
++---------------------------------------------------------+--------+---------+--------+-------+
+| label                                                   | status |    succ | avg_rt | error |
++---------------------------------------------------------+--------+---------+--------+-------+
+| http://127.0.0.1:8080                                   |   OK   | 100.00% |  0.030 |       |
+| http://127.0.0.1:8080/performance.yml                   |   OK   | 100.00% |  0.030 |       |
+| http://127.0.0.1:8080/readme.md                         |   OK   | 100.00% |  0.030 |       |
+| http://127.0.0.1:8080/src/main/java/liteweb/Server.java |   OK   | 100.00% |  0.030 |       |
++---------------------------------------------------------+--------+---------+--------+-------+
+[2023-06-03 18:26:17,544 DEBUG Engine.Configuration] Dumping YAML config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.yml
+[2023-06-03 18:26:17,555 DEBUG Engine.Configuration] Dumping JSON config into C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\effective.json
+[2023-06-03 18:26:17,556 INFO root] Artifacts dir: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024
+[2023-06-03 18:26:17,557 INFO root] Done performing with code: 0
+[2023-06-03 18:26:17,557 DEBUG root] Closing log handler: C:\Users\gavwu\Development\simple-web-server\2023-06-03_18-24-55.722024\bzt.log
