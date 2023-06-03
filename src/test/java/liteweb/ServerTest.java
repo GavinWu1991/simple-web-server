@@ -34,7 +34,7 @@ class ServerTest {
     }
 
     @Test
-    void shouldReturn200_whenProduceRequest() throws IOException, InterruptedException {
+    void shouldReturn200_whenRequested() throws IOException, InterruptedException {
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         Socket clientSocket = new Socket() {
             @Override
