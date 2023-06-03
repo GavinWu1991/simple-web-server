@@ -58,8 +58,6 @@ public class Server {
                 Request req = new Request(requestContent);
                 Response res = new Response(req);
                 res.write(clientSocket.getOutputStream());
-
-                TimeUnit.NANOSECONDS.sleep(1);
             } catch (IOException | InterruptedException e) {
                 log.error("Exception", e);
             }
