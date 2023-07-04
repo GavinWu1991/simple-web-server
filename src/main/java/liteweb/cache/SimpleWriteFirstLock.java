@@ -6,12 +6,12 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 
-public class OptimisticReadWriteLock implements ReadWriteLock {
+public class SimpleWriteFirstLock implements ReadWriteLock {
 
     private final ReadLock readerLock;
     private final WriteLock writerLock;
 
-    public OptimisticReadWriteLock() {
+    public SimpleWriteFirstLock() {
         WriteSync writeSync = new WriteSync();
         ReadSync readSync = new ReadSync(writeSync);
 
@@ -85,7 +85,7 @@ public class OptimisticReadWriteLock implements ReadWriteLock {
     }
 
     /**
-     * The lock returned by method {@link OptimisticReadWriteLock#readLock}.
+     * The lock returned by method {@link SimpleWriteFirstLock#readLock}.
      */
     public static class ReadLock implements Lock {
         private final ReadSync sync;
@@ -121,7 +121,7 @@ public class OptimisticReadWriteLock implements ReadWriteLock {
     }
 
     /**
-     * The lock returned by method {@link OptimisticReadWriteLock#writeLock}.
+     * The lock returned by method {@link SimpleWriteFirstLock#writeLock}.
      */
     public static class WriteLock implements Lock {
         private final WriteSync sync;

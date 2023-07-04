@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public class LRUCache implements Cache {
     private final LinkedHashMap<String, byte[]> cache;
-    private final OptimisticReadWriteLock lock = new OptimisticReadWriteLock();
+    private final SimpleWriteFirstLock lock = new SimpleWriteFirstLock();
 
     public LRUCache(int capacity) {
         this.cache = new LinkedHashMap<String, byte[]>(capacity, 0.75f, true) {
