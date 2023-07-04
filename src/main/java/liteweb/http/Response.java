@@ -1,5 +1,7 @@
 package liteweb.http;
 
+import liteweb.cache.Cache;
+import liteweb.cache.LRUCache;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -7,12 +9,15 @@ import java.io.*;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Response {
 
     private static final Logger log = LogManager.getLogger(Response.class);
 
     public static final String VERSION = "HTTP/1.0";
+
+    public static final Cache CACHE = new LRUCache(10);
 
     private final List<String> headers = new ArrayList<>();
 
@@ -30,15 +35,12 @@ public class Response {
                 break;
             case GET:
                 try {
-                    // TODO fix dir bug http://localhost:8080/src/test
                     String uri = req.getUri();
                     File file = new File("." + uri);
                     if (file.isDirectory()) {
                         generateResponseForFolder(uri, file);
                     } else if (file.exists()) {
-                        fillHeaders(Status._200);
-                        setContentType(uri);
-                        fillResponse(getBytes(file));
+                        generateResponseForFile(uri, file);
                     } else {
                         log.info("File not found: {}", req.getUri());
                         fillHeaders(Status._404);
@@ -57,18 +59,48 @@ public class Response {
 
     }
 
+    private void generateResponseForFile(String uri, File file) throws IOException {
+        fillHeaders(Status._200);
+        setContentType(uri);
+
+        // Try to read file content from Cache
+        Optional<byte[]> optionalCachedValue = CACHE.getByteCache(uri);
+
+        if (optionalCachedValue.isPresent()) {
+            // Read file content from Cache
+            fillResponse(optionalCachedValue.get());
+            return;
+        }
+
+        // read file
+        byte[] bytes = Files.readAllBytes(file.toPath());
+        CACHE.putByteCache(uri, bytes);
+        fillResponse(bytes);
+    }
+
+
     private void generateResponseForFolder(String uri, File file) {
         fillHeaders(Status._200);
 
         headers.add(ContentType.of("HTML"));
+
+        // Try to read folder content from Cache
+        Optional<byte[]> optionalCachedValue = CACHE.getByteCache(uri);
+
+        if (optionalCachedValue.isPresent()) {
+            // Read file content from Cache
+            fillResponse(optionalCachedValue.get());
+            return;
+        }
+
         StringBuilder result = new StringBuilder("<html><head><title>Index of ");
         result.append(uri);
         result.append("</title></head><body><h1>Index of ");
         result.append(uri);
         result.append("</h1><hr><pre>");
 
-        // TODO add Parent Directory
         File[] files = file.listFiles();
+        assert files != null;
         for (File subFile : files) {
             result.append(" <a href=\"")
                     .append(subFile.getPath())
@@ -77,6 +109,7 @@ public class Response {
                     .append("</a>\n");
         }
         result.append("<hr></pre></body></html>");
+        CACHE.putByteCache(uri, result.toString().getBytes());
         fillResponse(result.toString());
     }
 
