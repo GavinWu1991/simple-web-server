@@ -1,7 +1,7 @@
 package liteweb.http;
 
 import liteweb.cache.Cache;
-import liteweb.cache.LRUCache;
+import liteweb.cache.ConditionalLRUCache;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,7 +17,7 @@ public class Response {
 
     public static final String VERSION = "HTTP/1.0";
 
-    public static final Cache CACHE = new LRUCache(10);
+    public static final Cache CACHE = new ConditionalLRUCache(10);
 
     private final List<String> headers = new ArrayList<>();
 
@@ -46,7 +46,7 @@ public class Response {
                         fillHeaders(Status._404);
                         fillResponse(Status._404.toString());
                     }
-                } catch (IOException e) {
+                } catch (IOException | InterruptedException e) {
                     log.error("Response Error", e);
                     fillHeaders(Status._400);
                     fillResponse(Status._400.toString());
@@ -59,7 +59,7 @@ public class Response {
 
     }
 
-    private void generateResponseForFile(String uri, File file) throws IOException {
+    private void generateResponseForFile(String uri, File file) throws IOException, InterruptedException {
         fillHeaders(Status._200);
         setContentType(uri);
 
@@ -79,7 +79,7 @@ public class Response {
     }
 
 
-    private void generateResponseForFolder(String uri, File file) {
+    private void generateResponseForFolder(String uri, File file) throws InterruptedException {
         fillHeaders(Status._200);
 
         headers.add(ContentType.of("HTML"));
